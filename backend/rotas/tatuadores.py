@@ -44,7 +44,7 @@ def listar_tatuadores():
     return tatuadores
 
 # GET /tatuadores/{id} — busca um tatuador pelo ID
-@router.get("{id}")
+@router.get("/{id}")
 def buscar_tatuador(id: int):
     conn = conectar()
     cursor = conn.cursor(dictionary=True)
